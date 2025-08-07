@@ -6,7 +6,8 @@ export default {
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
         playfair: ['Playfair Display', 'serif'],
-        lobs: ['Lobster', 'sans-serif']
+        lobs: ['Lobster', 'sans-serif'],
+        ab: ['DM Serif Display', 'serif']
       },
       colors: {
         primary: {
