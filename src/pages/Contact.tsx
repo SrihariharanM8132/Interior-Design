@@ -62,39 +62,39 @@ export const Contact: React.FC<ContactProps> = ({ }) => {
     {
       icon: Mail,
       title: 'Email Us',
-      content: 'hello@techcorp.com',
-      description: 'Send us an email anytime'
+      content: 'tarainterior111@gmail.com',
+      description: 'Send us an email anytime.'
     },
     {
       icon: Phone,
       title: 'Call Us',
-      content: '+1 (555) 123-4567',
-      description: 'Mon-Fri from 8am to 5pm'
+      content: '+91 99446 89222',
+      description: 'Mon-Fri from 8am to 5pm.'
     },
     {
       icon: MapPin,
       title: 'Visit Us',
-      content: '123 Business Ave, Tech City, TC 12345',
-      description: 'Come say hello at our office'
+      content: 'No 1/2, Near Camford International School, Manikaranpalayam, Sangaralinganar Road, Ganapathy-641006',
+      description: 'Come and Make your Idea Real '
     }
   ];
 
   return (
     <div>
       {/* Hero Section */}
-      <section className="py-20 h-96 bg-[url('/cc3.jpg')]  bg-cover bg-center  text-black">
+      <section className="py-20 h-96 bg-[url('/cv1.jpg')]  bg-cover bg-center ">
         <Container className="grid grid-cols-2 gap-8">
           <div/>
           
           <div className="text-left max-w-4xl mx-auto">
             <AnimatedElement animation="fadeIn">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                Get In <span className="text-transparent bg-clip-text bg-gradient-to-r from-black to-gray-200">Touch</span>
+              <h1 className="  text-4xl md:text-5xl lg:text-6xl font-playfair">
+                <span className="box-decoration-slice bg-desert-vanilla text-yellow-600 ">Get In Touch</span>
               </h1>
             </AnimatedElement>
             <AnimatedElement animation="slideUp" delay={200}>
-              <p className="text-left text-xl md:text-2xl text-white leading-relaxed font-serif italic">
-                Ready to transform your business? Let's discuss your project and create something amazing together.
+              <p className="text-left text-xl md:text-xl text-black-600 leading-relaxed font-playfair bg-desert-vanilla rounded lg px-4 py-2">
+                - Ready to transform your business? Let's discuss your project and create something amazing together.
               </p>
             </AnimatedElement>
           </div>
@@ -102,27 +102,31 @@ export const Contact: React.FC<ContactProps> = ({ }) => {
       </section>
 
       {/* Contact Form & Info */}
-      <section className="relative py-20 bg-[url('/14.jpg')] bg-cover bg-center">
-        <div className="absolute inset-0 bg-gradient-to-b from-desert-sandal3 via-desert-sandal2 to-treanparent "></div>
+      <section className="relative py-20 bg-[url('/65.jpg')] bg-cover bg-center">
+        <div className="absolute inset-0 bg-gradient-to-r from-black to-treanparent "></div>
         <div className="relative z-10">
           <Container>
           <div className="grid lg:grid-cols-2 gap-16">
             {/* Contact Form */}
             <AnimatedElement animation="slideInLeft">
               <div className="bg-black rounded-2xl p-8 shadow-lg border border-gray-100">
-                <h2 className="text-2xl font-bold text-gray-300 mb-6">Send us a message</h2>
-                
+                  {!isSubmitted && (
+      <h2 className="text-2xl font-serif text-gray-300 mb-6">
+        Send us a message
+      </h2>
+    )}
+
                 {isSubmitted ? (
                   <div className="text-center py-8">
-                    <CheckCircle className="h-16 w-16 text-green-500 mx-auto mb-4" />
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Message Sent!</h3>
-                    <p className="text-gray-600">Thank you for reaching out. We'll get back to you within 24 hours.</p>
+                    <CheckCircle className="h-16 w-16 text-green-300 mx-auto mb-4" />
+                    <h3 className="text-xl font-serif text-gray-300 mb-2">Message Sent!</h3>
+                    <p className="text-gray-300 font-playfair">Thank you for reaching out. We'll get back to you within 24 hours.</p>
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="bg-black space-y-6">
                     <div className="grid md:grid-cols-2 gap-6">
                       <div>
-                        <label htmlFor="name" className="block text-sm font-medium text-white mb-2">
+                        <label htmlFor="name" className="block text-sm font-playfair text-white mb-2">
                           Name *
                         </label>
                         <input
@@ -131,16 +135,17 @@ export const Contact: React.FC<ContactProps> = ({ }) => {
                           name="name"
                           value={formData.name}
                           onChange={handleInputChange}
-                          className={`w-full px-4 py-3 bg-gray-600 rounded-lg border ${
+                          className={`w-full px-4 py-3 font-serif  bg-gray-800 rounded-lg border ${
                             errors.name ? 'border-red-500' : 'border-gray-800'
                           } focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors`}
-                          placeholder="Your full name"
+                          style={{ color: 'white' }} 
+                          placeholder="Your full name "
                         />
                         {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
                       </div>
                       
                       <div>
-                        <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                        <label htmlFor="email" className="block text-sm font-playfair text-gray-300 mb-2">
                           Email *
                         </label>
                         <input
@@ -149,9 +154,10 @@ export const Contact: React.FC<ContactProps> = ({ }) => {
                           name="email"
                           value={formData.email}
                           onChange={handleInputChange}
-                          className={` w-full px-4 py-3 rounded-lg border ${
+                          className={` w-full px-4 py-3 font-serif bg-gray-800 rounded-lg border-0 ${
                             errors.email ? 'border-red-500' : 'border-gray-300'
                           } focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors`}
+                          style={{ color: 'white' }} 
                           placeholder="your@email.com"
                         />
                         {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
@@ -159,7 +165,7 @@ export const Contact: React.FC<ContactProps> = ({ }) => {
                     </div>
                     
                     <div>
-                      <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
+                      <label htmlFor="company" className="block text-sm font-playfair text-gray-300 mb-2">
                         Company
                       </label>
                       <input
@@ -168,13 +174,14 @@ export const Contact: React.FC<ContactProps> = ({ }) => {
                         name="company"
                         value={formData.company}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                        className="w-full px-4 py-3 font-serif text-white rounded-lg border-0 bg-gray-800 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                        style={{ color: 'white' }} 
                         placeholder="Your company name"
                       />
                     </div>
                     
                     <div>
-                      <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                      <label htmlFor="message" className="block text-sm font-playfair text-gray-300 mb-2">
                         Message *
                       </label>
                       <textarea
@@ -183,10 +190,12 @@ export const Contact: React.FC<ContactProps> = ({ }) => {
                         rows={5}
                         value={formData.message}
                         onChange={handleInputChange}
-                        className={`w-full px-4 py-3 rounded-lg border ${
+                        className={`w-full px-4 py-3 font-serif bg-gray-800 rounded-lg border-0 ${
                           errors.message ? 'border-red-500' : 'border-gray-300'
                         } focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors resize-none`}
+                        style={{ color: 'white' }} 
                         placeholder="Tell us about your project..."
+
                       />
                       {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message}</p>}
                     </div>
@@ -197,7 +206,7 @@ export const Contact: React.FC<ContactProps> = ({ }) => {
                       size="lg"
                       icon={Send}
                       loading={isSubmitting}
-                      className="w-full"
+                      className="w-full bg-yellow-600 hover:bg-yellow-800"
                     >
                       {isSubmitting ? 'Sending...' : 'Send Message'}
                     </Button>
@@ -210,8 +219,8 @@ export const Contact: React.FC<ContactProps> = ({ }) => {
             <AnimatedElement animation="slideInRight">
               <div className="space-y-8">
                 <div>
-                  <h2 className=" text-shadow-lg text-2xl font-bold text-gray-400 mb-6">Contact Information</h2>
-                  <p className="text-gray-200 drop-shadow-md leading-relaxed mb-8">
+                  <h2 className=" text-shadow-lg text-2xl font-playfair text-gray-100 mb-7">Contact Information</h2>
+                  <p className="text-gray-200 drop-shadow-md font-playfair leading-relaxed mb-8">
                     Have questions about our services or want to discuss your project? 
                     We're here to help and would love to hear from you.
                   </p>
@@ -220,45 +229,45 @@ export const Contact: React.FC<ContactProps> = ({ }) => {
                 <div className="space-y-6">
                   {contactInfo.map((info) => (
                     <div key={info.title} className="flex items-start space-x-4">
-                      <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-3 rounded-xl">
+                      <div className="bg-gradient-to-r from-yellow-400 to-yellow-600 p-3 rounded-xl">
                         <info.icon className="h-6 w-6 text-white" />
                       </div>
                       <div>
-                        <h3 className="font-semibold text-gray-900 mb-1">{info.title}</h3>
-                        <p className="text-gray-800 font-medium mb-1">{info.content}</p>
-                        <p className="text-gray-600 text-sm">{info.description}</p>
+                        <h3 className="font-playfair text-gray-100 mb-1">{info.title}</h3>
+                        <p className="text-gray-300 font-playfair mb-1">{info.content}</p>
+                        <p className="text-gray-300 font-playfair text-sm">{info.description}</p>
                       </div>
                     </div>
                   ))}
                 </div>
 
                 {/* Office Hours */}
-                <div className="bg-gray-50 rounded-2xl p-6">
-                  <h3 className="font-semibold text-gray-900 mb-4">Office Hours</h3>
+                <div className="bg-gray-200 rounded-2xl p-6">
+                  <h3 className="font-serif text-gray-900 mb-4">Office Hours</h3>
                   <div className="space-y-2 text-sm">
                     <div className="flex justify-between">
-                      <span className="text-gray-600">Monday - Friday</span>
-                      <span className="text-gray-900 font-medium">8:00 AM - 5:00 PM</span>
+                      <span className="text-gray-900 font-serif">Monday - Friday</span>
+                      <span className="text-gray-900 font-serif">8:00 AM - 5:00 PM</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-gray-600">Saturday</span>
-                      <span className="text-gray-900 font-medium">9:00 AM - 2:00 PM</span>
+                      <span className="text-gray-900 font-serif">Saturday</span>
+                      <span className="text-gray-900 font-serif">9:00 AM - 2:00 PM</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-gray-600">Sunday</span>
-                      <span className="text-gray-900 font-medium">Closed</span>
+                      <span className="text-gray-900 font-serif">Sunday</span>
+                      <span className="text-gray-900 font-serif">Closed</span>
                     </div>
                   </div>
                 </div>
 
                 {/* Social Media */}
                 <div>
-                  <h3 className="font-semibold text-gray-900 mb-4">Follow Us</h3>
+                  <h3 className="font-serif text-black-900 mb-4">Follow Us</h3>
                   <div className="flex space-x-4">
                     {[
-                      { name: 'LinkedIn', url: 'https://www.linkedin.com/in/dineshkumar-ms/' },
-                      { name: 'Twitter', url: 'https://twitter.com/your-profile' },
-                      { name: 'Github', url: 'https://github.com/your-profile' },
+                      { name: 'LinkedIn', url: 'https://www.linkedin.com/in/tara-interiors-49b5a42b4/' },
+                      { name: 'Instagram', url: 'https://www.instagram.com/tarainteriors_homes/' },
+                      { name: 'IndiaMart', url: 'https://www.indiamart.com/tara-interiors/' },
                     ].map((platform) => (
                       <a
                         key={platform.name}

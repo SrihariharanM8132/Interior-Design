@@ -19,7 +19,7 @@ export const Team: React.FC = () => {
           <div className="text-center max-w-4xl mx-auto">
             <AnimatedElement animation="fadeIn">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                Meet Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Team</span>
+                Team Behind<span className="text-transparent px-4 italic bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Us</span>
               </h1>
             </AnimatedElement>
             <AnimatedElement animation="slideUp" delay={200}>

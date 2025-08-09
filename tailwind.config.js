@@ -39,7 +39,7 @@ export default {
         sandal2: '#ba9b86',
         sandal3: '#b59e7d',
         sand:'#cec148',
-        vanilla:'#f1eada',
+        vanilla:'#f1eada',  
         almond:'#eaded0',
         aloe:'#asaed8',
         maha:'#584738',
